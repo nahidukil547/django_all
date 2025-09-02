@@ -1,0 +1,27 @@
+{% load static %}
+
+    <link rel="stylesheet" href="{% static "style.css" %}">
+
+<body>
+   
+    <nav class="navbar">
+        <div class="logo">Dashboard</div>
+        <div class="nav-menu">
+            <div class="nav-item">
+                <a href="" class="nav-btn profile-btn">👤
+                    {% if user.is_authenticated %}{{user.username}} {% else %}Profile{% endif %} </a>
+            </div>
+            <div class="nav-item">
+                <a href="{% url "reset_password" %}" class="nav-btn reset-btn">🔑 Reset Password</a>
+            </div>
+            <div class="nav-item">
+                <a href="{% url "change_password" %}" class="nav-btn reset-btn">🔑 Change Password</a>
+            </div>
+            <div class="nav-item">
+                <a href="{% url "logout" %}" class="nav-btn">Log Out</a>
+            </div>
+        </div>
+    </nav>
+
+</body>
+</html>

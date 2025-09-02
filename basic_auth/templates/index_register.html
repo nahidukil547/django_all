@@ -19,7 +19,6 @@
             {% csrf_token %}
             <div class="form-group">
                 <label for="username">Username</label>
-                {% comment %} <input type="text" id="username" name="username" placeholder="Enter your username" required> {% endcomment %}
                 {{form.username}}
             </div>
 
@@ -58,7 +57,7 @@
         </form>
 
         <div class="login-link">
-            Already have an account? <a href="#login">Sign in</a>
+            Already have an account? <a href="/login/">Sign in</a>
         </div>
     </div>
 

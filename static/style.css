@@ -50,11 +50,6 @@
             background: linear-gradient(90deg, transparent, var(--accent), transparent);
         }
 
-        .header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
         .header h1 {
             font-size: 1.875rem;
             font-weight: 700;
@@ -64,12 +59,6 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
-        .header p {
-            color: var(--text-secondary);
-            font-size: 0.875rem;
-        }
-
         .form-group {
             margin-bottom: 1.5rem;
         }
@@ -81,39 +70,6 @@
 
         .form-row .form-group {
             flex: 1;
-        }
-
-        label {
-            display: block;
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .input-container {
-            position: relative;
-        }
-
-        input {
-            width: 100%;
-            padding: 0.875rem 1rem;
-            background: var(--tertiary);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            color: var(--text-primary);
-            font-size: 0.875rem;
-            transition: all 0.2s ease;
-            outline: none;
-        }
-
-        input:focus {
-            border-color: var(--secondary);
-            box-shadow: 0 0 0 3px rgba(48, 209, 88, 0.1);
-        }
-
-        input::placeholder {
-            color: var(--text-secondary);
         }
 
         .password-toggle {
@@ -133,30 +89,7 @@
             color: var(--accent);
         }
 
-        .submit-btn {
-            width: 100%;
-            padding: 0.875rem;
-            background: linear-gradient(135deg, var(--secondary), #28a745);
-            border: none;
-            border-radius: 8px;
-            color: white;
-            font-size: 0.875rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            margin-top: 1rem;
-            position: relative;
-            overflow: hidden;
-        }
 
-        .submit-btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 10px 25px rgba(48, 209, 88, 0.3);
-        }
-
-        .submit-btn:active {
-            transform: translateY(0);
-        }
 
         .login-link {
             text-align: center;
@@ -186,7 +119,7 @@
                 gap: 0;
             }
         }
-                .login-container {
+            .login-container {
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 16px;
@@ -208,27 +141,7 @@
             height: 1px;
             background: linear-gradient(90deg, transparent, var(--accent), transparent);
         }
-
-        .header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .header h1 {
-            font-size: 1.875rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, var(--text-primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .header p {
-            color: var(--text-secondary);
-            font-size: 0.875rem;
-        }
-
+       
         .form-group {
             margin-bottom: 1.5rem;
         }
@@ -266,23 +179,6 @@
             color: var(--text-secondary);
         }
 
-        .password-toggle {
-            position: absolute;
-            right: 0.875rem;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            color: var(--text-secondary);
-            cursor: pointer;
-            font-size: 0.875rem;
-            transition: color 0.2s ease;
-        }
-
-        .password-toggle:hover {
-            color: var(--accent);
-        }
-
         .forgot-password {
             text-align: right;
             margin-top: 0.5rem;
@@ -298,6 +194,182 @@
 
         .forgot-password a:hover {
             color: var(--secondary);
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .register-link a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .register-link a:hover {
+            color: var(--secondary);
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 2rem;
+            }
+        }
+
+        .navbar {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--text-primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-btn {
+            background: var(--tertiary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-btn:hover {
+            border-color: var(--secondary);
+            background: var(--secondary);
+            color: var(--background);
+            transform: translateY(-1px);
+        }
+
+        .profile-btn {
+            background: linear-gradient(135deg, var(--accent), #b8941f);
+        }
+
+        .profile-btn:hover {
+            background: linear-gradient(135deg, var(--secondary), #28a745);
+        }
+
+        .reset-btn {
+            background: var(--tertiary);
+            border-color: var(--accent);
+        }
+
+        .reset-btn:hover {
+            background: var(--accent);
+            color: var(--background);
+        }
+
+        /* Added responsive design */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-menu {
+                gap: 1rem;
+            }
+
+            .main-content {
+                padding: 1rem;
+            }
+        }
+        /* </CHANGE> */
+        .reset-container {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reset-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        /* Added icon styling for reset password visual */
+        .reset-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
         }
 
         .submit-btn {
@@ -325,26 +397,39 @@
             transform: translateY(0);
         }
 
-        .register-link {
+        /* Added success message styling */
+        .success-message {
+            background: rgba(48, 209, 88, 0.1);
+            border: 1px solid var(--secondary);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+            text-align: center;
+            color: var(--secondary);
+            font-size: 0.875rem;
+            display: none;
+        }
+
+        .back-link {
             text-align: center;
             margin-top: 1.5rem;
             font-size: 0.875rem;
             color: var(--text-secondary);
         }
 
-        .register-link a {
+        .back-link a {
             color: var(--accent);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.2s ease;
         }
 
-        .register-link a:hover {
+        .back-link a:hover {
             color: var(--secondary);
         }
 
         @media (max-width: 480px) {
-            .login-container {
+            .reset-container {
                 padding: 2rem;
             }
         }
