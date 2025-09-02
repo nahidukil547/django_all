@@ -62,11 +62,3 @@ Django provides all of these features out of the box, so developers don’t have
 - Flexible and extendable (supports custom backends).  
 - Critical for **any production-ready project**.  
 
----
-
-## 📌 Tech Tags
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)  
-![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)  
-![Authentication](https://img.shields.io/badge/Authentication-Security-brightgreen?style=for-the-badge)  
-![Authorization](https://img.shields.io/badge/Authorization-Permissions-blue?style=for-the-badge)  
